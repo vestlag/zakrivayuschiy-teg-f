@@ -547,6 +547,8 @@
           class="button card__save-button"
           type="button"
           aria-label="Сохранить на память"
+          onclick="window['dialog'].showModal()"
+          aria-controls="dialog"
         >
           <svg class="disket">
             <use href="#disket"></use>
@@ -555,7 +557,7 @@
         </button>
       </div>
     </main>
-    <dialog class="dialog" id="save-dialog">
+    <dialog class="dialog" id="dialog">
       <div class="dialog__header">
         <svg class="dialog__disk" width="39" height="39" viewBox="0 0 40 40">
           <use href="#disket"></use>
@@ -563,13 +565,17 @@
         <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
       </div>
       <div class="dialog__actions">
-        <button class="button dialog__button" id="confirm-btn" type="button">
+        <button
+          class="button dialog__button"
+          id="confirm-btn"
+          type="button"
+          onclick="window['dialog'].close()"
+        >
           <span class="button__text-md">Ок</span>
         </button>
       </div>
     </dialog>
     <script src="./scripts/like.js"></script>
-    <script src="./scripts/dialog.js"></script>
     <svg xmlns="http://www.w3.org/2000/svg">
       <symbol id="disket" viewBox="0 0 29 29" fill="currentColor">
         <path
