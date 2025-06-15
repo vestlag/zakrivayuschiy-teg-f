@@ -547,7 +547,7 @@
           class="button card__save-button"
           type="button"
           aria-label="Сохранить на память"
-          onclick="window['dialog'].showModal()"
+          onclick="event.preventDefault(); document.getElementById('dialog').showModal();"
           aria-controls="dialog"
         >
           <svg class="disket">
@@ -569,7 +569,7 @@
           class="button dialog__button"
           id="confirm-btn"
           type="button"
-          onclick="window['dialog'].close()"
+          onclick="event.preventDefault(); document.getElementById('dialog').close();"
         >
           <span class="button__text-md">Ок</span>
         </button>
