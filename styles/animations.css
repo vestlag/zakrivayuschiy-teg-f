@@ -23,7 +23,7 @@
   transition: fill 0.3s linear 0.03s;
 }
 
-.heart{
+.heart {
   will-change: transform;
 }
 
