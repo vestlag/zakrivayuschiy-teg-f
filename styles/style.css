@@ -184,13 +184,15 @@
 .card__like-button {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 130px;
 }
 
 .button__text {
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
-  padding: 11px 35px;
   color: #fff;
   mix-blend-mode: difference;
 }
