@@ -11,6 +11,350 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  font-family: var(--font-primary);
+  font-variation-settings: "wght" var(--fw-card-text);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 100px;
+}
+
+.section__size {
+  inline-size: min(100vi, 700px);
+  margin-inline: auto;
+}
+
+.header__inner {
+  box-sizing: border-box;
+  max-inline-size: var(--header-max-width);
+  block-size: clamp(var(--header-min-height), 30vw, var(--header-max-height));
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo__tag {
+  font-family: var(--font-accent);
+  font-size: var(--logo-font-size);
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.logo__subtitle {
+  font-family: var(--font-accent);
+  font-size: var(--subtitle-font-size);
+  margin-top: 20px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.cards {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.cards__inner {
+  width: 100%;
+  max-inline-size: var(--cards-max-width);
+  min-inline-size: var(--cards-min-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  width: 100%;
+  background: var(--color-bg-card);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--fw-card-heading);
+  padding-block: 5px;
+  padding-inline: 10px;
+  border: 2px solid #000;
+}
+
+.card__image-container {
+  position: relative;
+  border: 2px solid #000;
+}
+
+.card__image {
+  object-position: center;
+  object-fit: cover;
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card__image_theme-contrast {
+  filter: contrast(1.5);
+}
+
+.card__image_theme-blur {
+  filter: blur(2px);
+}
+
+.card__image_theme-sepia {
+  filter: sepia(0.8);
+}
+
+.card__image_theme-invert {
+  filter: invert(0.9);
+}
+
+.card__image_theme-bright {
+  filter: brightness(1.3);
+}
+
+.card__image_theme-gray {
+  filter: grayscale(100%);
+}
+
+.card__image_theme-multiple {
+  filter: grayscale(0.6) contrast(1.4) brightness(1.1);
+}
+
+.card__body {
+  padding: 23.5px;
+  border: 2px solid #000;
+  border-block-start: none;
+}
+
+.card__text {
+  font-variation-settings: "wght" var(--fw-card-text);
+  font-size: 18px;
+  line-height: 21px;
+  max-width: var(--card-text-size);
+}
+
+.card__body > p + p {
+  margin-top: 27px;
+}
+
+.card__body > p {
+  margin: 0;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-block-start: 24px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.card__like-button {
+  display: flex;
+  align-items: center;
+}
+
+.button__text {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 90%;
+  padding: 11px 35px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  color: var(--color-text);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-shadow: -1px 0 var(--color-stroke-label), 0 1px var(--color-stroke-label),
+    1px 0 var(--color-stroke-label), 0 -1px var(--color-stroke-label);
+}
+
+.disket {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  inline-size: 21px;
+  block-size: 21px;
+  mix-blend-mode: difference;
+}
+
+.card__save-button {
+  inline-size: 335px;
+  block-size: 51px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 19px;
+  margin: 0 auto;
+}
+
+.button__text-md {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  border: 2px solid #000;
+  background-color: #fff;
+  min-width: 353px;
+  min-height: 191px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog:not([open]) {
+  display: none;
+}
+
+.dialog[open] {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dialog__header {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog__disk {
+  flex-shrink: 0;
+}
+
+.dialog__title {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-weight: var(--fw-card-text);
+  color: var(--color-text);
+  text-transform: uppercase;
+  line-height: 1.5;
+  width: 234px;
+}
+
+.dialog__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.dialog__button {
+  padding: 12.5px 132.5px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 293px;
+  max-height: 38px;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  size: 100%;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: #000;
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--color-stroke-label)) or
+    (text-stroke: 1px var(--color-stroke-label))
+) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-stroke-label);
+    text-stroke: 1px var(--color-stroke-label);
+  }
+}
+
+@media (max-width: 376px) {
+  .section__size {
+    inline-size: min(100vi, 375px);
+    margin-inline: auto;
+  }
+
+  .card__label {
+    right: 13px;
+    top: 22px;
+  }
+
+  .card__save-button {
+    flex-direction: column;
+    inline-size: 310px;
+    block-size: 84px;
+    padding-left: 0;
+  }
+
+  .disket {
+    block-size: 28px;
+    inline-size: 28px;
+    margin-top: 13px;
+  }
 }

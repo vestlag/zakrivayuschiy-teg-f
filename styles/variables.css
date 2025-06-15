@@ -1,1 +1,38 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-accent: "PressStart2P", cursive;
+  --fw-card-text: 400;
+  --fw-card-heading: 700;
+  --header-max-width: clamp(375px, 100%, 700px);
+  --logo-font-size: clamp(49px, 5vw, 65px);
+  --subtitle-font-size: clamp(14px, 3.5vw, 23px);
+  --color-text: #000;
+  --cards-max-width: 700px;
+  --cards-min-width: 375px;
+  --color-bg-card: #fff;
+  --color-stroke-label: #fff;
+  --header-min-height: 327px;
+  --header-max-height: 368px;
+  --card-text-size: clamp(321px, 65vw, 646px);
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  --button-bg-color: #fff;
+  --button-text-color: #fff;
+  --filling-color: #ff0000;
+  --contour-color: #000;
+}
