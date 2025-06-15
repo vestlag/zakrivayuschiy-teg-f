@@ -14,7 +14,7 @@
   --color-stroke-label: #fff;
   --header-min-height: 327px;
   --header-max-height: 368px;
-  --card-text-size: clamp(321px, 65vw, 646px);
+  --card-width-size: clamp(321px, 65vw, 646px);
   --bg-gradient: repeating-linear-gradient(
       90deg,
       #d3d3d3 0,

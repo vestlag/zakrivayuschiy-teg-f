@@ -23,8 +23,14 @@
   transition: fill 0.3s linear 0.03s;
 }
 
+.heart{
+  will-change: transform;
+}
+
 .sparks {
   opacity: 0;
+  fill: transparent;
+  will-change: transform;
 }
 
 .like-icon:hover .main-body {

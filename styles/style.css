@@ -143,7 +143,7 @@
   font-variation-settings: "wght" var(--fw-card-text);
   font-size: 18px;
   line-height: 21px;
-  max-width: var(--card-text-size);
+  max-width: var(--card-width-size);
 }
 
 .card__body > p + p {
@@ -307,7 +307,6 @@
   position: absolute;
   inset: 0;
   background-color: #000;
-  size: 100%;
   transform: scaleX(0);
   transition: transform 0.5s ease-in-out;
   transform-origin: left;
