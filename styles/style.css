@@ -32,7 +32,6 @@
 .header__inner {
   box-sizing: border-box;
   max-inline-size: var(--header-max-width);
-  block-size: clamp(var(--header-min-height), 30vw, var(--header-max-height));
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -42,6 +41,8 @@
 
 .logo {
   text-align: center;
+  margin-block-start: clamp(120px, 30vw, 128px);
+  margin-block-end: clamp(120px, 30vw, 128px);
 }
 
 .logo__tag {
@@ -241,8 +242,6 @@
 .dialog {
   border: 2px solid #000;
   background-color: #fff;
-  min-width: 353px;
-  min-height: 191px;
 }
 
 .dialog::backdrop {
@@ -254,7 +253,8 @@
 }
 
 .dialog[open] {
-  padding: 0;
+  padding-block: 30px;
+  padding-inline: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,7 +288,7 @@
 }
 
 .dialog__button {
-  padding: 12.5px 132.5px;
+  padding-block: 12.5px;
   font-family: var(--font-accent);
   font-size: 14px;
   text-transform: uppercase;
@@ -357,5 +357,9 @@
     block-size: 28px;
     inline-size: 28px;
     margin-top: 13px;
+  }
+
+  .dialog[open] {
+    padding-inline: 38.5px;
   }
 }

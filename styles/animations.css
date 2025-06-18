@@ -29,7 +29,6 @@
 
 .sparks {
   opacity: 0;
-  fill: transparent;
   will-change: transform;
 }
 
